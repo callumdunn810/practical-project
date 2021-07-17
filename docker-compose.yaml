@@ -6,6 +6,7 @@ services:
         build: ./service_1
         deploy:
             replicas: 3
+        protocol: tcp
         ports: 
         - published: 5000
           target: 5000
@@ -17,23 +18,32 @@ services:
         build: ./service_2_skill
         deploy:
             replicas: 3
+        protocol: tcp
         ports:
         - published: 5001
         target: 5001
+        depends on:
+        - 'server'
     3_alliance:
         container_name: service_3_alliance
         image: callumdunn810/service_3_alliance
         build: ./service_3_alliance
         deploy:
             replicas: 3
+        protocol: tcp
         ports:
         - published: 5002
         target: 5002
+        depends on:
+        - 'server'
     4_race:
         container_name: service_4_race
         image: callumdunn810/service_4_race
         build: ./service_4_racedeploy:
             replicas: 3
+        protocol: tcp
         ports:
         - published: 5003
         target: 5003
+        depends on:
+        - 'server'
