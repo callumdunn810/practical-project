@@ -1,7 +1,8 @@
 pipeline {
     agent any
     environment {
-        DATABASE_PASSWORD = credentials('DATABASE_URI'='mysql+pymysql://root:Grg170dx@34.105.231.190:3306/generatedb')
+        DATABASE_PASSWORD = credentials('DATABASE_URI')
+        DATABASE_URI='mysql+pymysql://root:Grg170dx@34.105.231.190:3306/generatedb'
     }
     stages {
         stage('Build') {
