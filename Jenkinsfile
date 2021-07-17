@@ -1,16 +1,14 @@
-pipeline {
+pipeline{
     agent any
-    environment {
+    environment{
         DB_PASSWORD = credentials('DATABASE_URI')
         DATABASE_URI='mysql+pymysql://root:Grg170dx@34.105.231.190:3306/generatedb'
     }
-    stages {
+    stages{
         stage('Build') {
-            steps {
+            steps{
                 sh "export DB_PASSWORD"
                 sh "docker-compose build"
-                
-            
             }
         }
         stage('Test') {
@@ -21,8 +19,8 @@ pipeline {
                 sh "cd service_4_race && pytest test_race.py"
             }
         }
-        stage('Deploy') {
-            steps {
+        stage('Deploy'){
+            steps{
                 sh "sudo docker stack services stack-1"
             }
         }
