@@ -1,13 +1,13 @@
 pipeline {
     agent any
     environment {
-        DB_PASSWORD = credentials("DB_URI")
+        DATABASE_PASSWORD = credentials("DATABSE_URI")
     }
     stages {
         stage('Build') {
             steps {
                 sh "docker-compose build"
-                sh "export DB_PASSWORD"
+                sh "export DATABASE_PASSWORD"
             
             }
         }
