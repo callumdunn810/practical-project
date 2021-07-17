@@ -1,5 +1,5 @@
 pipeline {
-    enviroment {
+    environment {
         DB_PASSWORD = credentials("DB_URI")
     }
     stages {
