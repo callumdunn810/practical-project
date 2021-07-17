@@ -1,23 +1,23 @@
 version: '3.8'
 services:
-    service1:
-        container_name: service1
-        image: callumdunn810/service1
-        build: ./service1
+    service_1:
+        container_name: service_1
+        image: callumdunn810/service_1
+        build: ./service_1
         ports: 
         - published: 5000
           target: 5000
         environment:
           DATABASE_URI: ${DATABASE_URI}
-    service2:
-        container_name: service2-skill
-        image: callumdunn810/service1-skill
-        build: ./service2-skill
-    service3:
-        container_name: service3-alliance
-        image: callumdunn810/service3-alliance
-        build: ./service3-alliance
-    service4:
-        container_name: service4-race
-        image: callumdunn810/service4-race
-        build: ./service4-race
+    2_skill:
+        container_name: service_2_skill
+        image: callumdunn810/service_2_skill
+        build: ./service_2_skill
+    3_alliance:
+        container_name: service_3_alliance
+        image: callumdunn810/service_3_alliance
+        build: ./service_3_alliance
+    4_race:
+        container_name: service_4_race
+        image: callumdunn810/service_4_race
+        build: ./service_4_race
