@@ -42,4 +42,7 @@ Unfortunately I ran into an issue when attempting the pipline work which made it
 
 Anytime I tried to do something with docker such as change the permissions or build the stack my ssh would instantly disconnect on vscode and the virtual machine would crash. I spent saturday and sunday attempting to fix this problem but I had no luck. 
 
+[VSCode Error](https://i.imgur.com/bl2LdVd.png)
+
+
 [CI-Pipeline](https://i.imgur.com/FYITbiW.png)
