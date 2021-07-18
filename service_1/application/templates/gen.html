@@ -2,7 +2,44 @@
 <html>
 <head>
 <style>
-
+{box-sizing: border-box;}
+ body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000000;
+}
+div {
+  background-color: #000000;
+  opacity: 1; 
+}
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+h2 {text-align: center;}
+.topnav {text-align: center}
+.topnav {
+  overflow: hidden;
+  background-color: #5a1d1d;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: #fffefe;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color:#000000;
+  color: #fffafa;
+}
+a:link {
+  color: #5a1d1d;
+}
+a:visited {
+  color: #ffffff;
+}
 </style>
       <title>Generate</title>
       <div class="topnav">
@@ -12,16 +49,16 @@
     </head>
     <body>
       
-          <h1><strong>YOUR CHARACTER IS</strong></h1>
-          </a> <p><strong> Class: {{ skill }}  <br><br> Alliance: {{ alliance }} <br><br>
+          <h1><strong><p style="color:#ffffff;">YOUR CHARACTER IS</p></strong></h1>
+          </a> <div class="arial"><p style="color: #ffffff"><strong> Class: {{ skill }}  <br><br> Alliance: {{ alliance }} <br><br>
             Race: {{ race }} <br><br><a href="{{ ('/generate') }}">Generate again!</a></p></strong></div>
   
 
           </p>
 
-          <h2></p>YOUR LAST CHARACTER WAS</h2>
+          <h2><p style="color:#ffffff;"></p>YOUR LAST CHARACTER WAS</h2>
             {% for character in last_five_characters %}
-        <strong> Class: {{ character.skill }}  <br><br>  Alliance: {{ character.alliance }} <br><br> 
+        <p style="color: #f8f8f8"><strong> Class: {{ character.skill }}  <br><br>  Alliance: {{ character.alliance }} <br><br> 
           Race: {{ character.race }}</strong></div></P>
           {% endfor %}
         </body>
