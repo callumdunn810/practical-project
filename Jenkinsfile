@@ -11,6 +11,7 @@ pipeline{
                 sh "docker pull callumdunn810/service_2_skill"
                 sh "docker pull callumdunn810/service_3_alliance"
                 sh "docker pull callumdunn810/service_4_race"
+                sh "sudo apt update"
                 sh "sudo apt install python3-pip"
                 sh "sudo apt install python3-venv"
                 sh "python3 -m venv venv"
