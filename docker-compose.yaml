@@ -39,7 +39,8 @@ services:
     4_race:
         container_name: service_4_race
         image: callumdunn810/service_4_race
-        build: ./service_4_racedeploy:
+        build: ./service_4_race
+        deploy:
             replicas: 3
         protocol: tcp
         ports:
