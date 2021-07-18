@@ -7,7 +7,6 @@ pipeline{
         stage('Build') {
             steps{
                 sh "export 'DATABASE_URI'=${DATABASE_URI}"
-                sh "curl https://get.docker.com | sudo bash"
                 sh "docker pull callumdunn810/service_1"
                 sh "docker pull callumdunn810/service_2_skill"
                 sh "docker pull callumdunn810/service_3_alliance"
