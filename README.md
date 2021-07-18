@@ -5,7 +5,7 @@ The main function of this app is to generate a random character based on the gam
 
 ## Testing
 
-during the testing I ran into an issue where all the tests run and pass when you're in that directory but once you try run pytest from the root only 2/5 pass. I didn't want to spend too much time cfiguring out how to correct this error and risk falling behind so I moved on. 
+during the testing I ran into an issue where all the tests run and pass when you're in that directory but once you try run pytest from the root only 2/5 pass. I didn't want to spend too much time figuring out how to correct this error and risk falling behind so I moved on. 
 
 The tests for service1 tests firstly, if the home page returns a 200 code and secondly, if the overall generate function combining all 4 services work. [Test1](https://i.imgur.com/uoPYfc3.png), [Test2](https://i.imgur.com/F6nkBN6.png)
 
@@ -37,5 +37,9 @@ Attached are images of what the current state of the website. The rolling update
 # Pipeline
 
 The pipeline for this project consists of a main Manager node with a worker node. A VM with Ansible and Jenkins on that connects to the manager and worker, along with the nginx vm. all this is detailed below in the diagram.
+
+Unfortunately I ran into an issue when attempting the pipline work which made it so I was unable to actually deploy the app as requested. 
+
+Anytime I tried to do something with docker such as change the permissions or build the stack my ssh would instantly disconnect on vscode and the virtual machine would crash. I spent saturday and sunday attempting to fix this problem but I had no luck. 
 
 [CI-Pipeline](https://i.imgur.com/FYITbiW.png)
