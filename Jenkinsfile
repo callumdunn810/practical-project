@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment{
-        DB_PASSWORD = credentials('DATABASE_URI')
+        DATABASE_URI = credentials('DATABASE_URI')
     }
     stages{
         stage('Build') {
@@ -14,7 +14,7 @@ pipeline{
                 sh "sudo apt install python3-pip"
                 sh "sudo apt install python3-venv -y"
                 sh "python3 -m venv venv"
-                sh ". ./venv/bin/activate && [o[3 install -r requirements.txt && pytest --version && pip3 install Flask-Testing"
+                sh ". ./venv/bin/activate && pip3 install -r requirements.txt && pytest --version && pip3 install Flask-Testing"
             }
         }
         stage('Test') {
