@@ -29,7 +29,7 @@ pipeline{
         }
         stage('Deploy'){
             steps{
-                sh "sudo docker stack services stack-1"
+                sh "docker stack deploy --compose-file docker-compose.yaml character"
             }
         }
     }
