@@ -12,7 +12,7 @@ pipeline{
                 sh "docker pull callumdunn810/service_3_alliance"
                 sh "docker pull callumdunn810/service_4_race"
                 sh "sudo apt install python3-pip"
-                sh "sudo apt install python3-venv -y"
+                sh "sudo apt install python3-venv"
                 sh "python3 -m venv venv"
                 sh ". ./venv/bin/activate && pip3 install -r requirements.txt && pytest --version && pip3 install Flask-Testing"
             }
