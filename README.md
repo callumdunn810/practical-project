@@ -14,7 +14,7 @@ The tests for service 2 and 3 are basically the same just with different code so
 Finally, the service 4 test checks if you will be given the correct race depending on which alliance you are given. [Test5](https://i.imgur.com/md38LyO.png)
 
 ## Test Coverage
-[Service_1](https://i.imgur.com/kHy3GvM.png),[Service_2_skill](https://i.imgur.com/GoVGo9H.png),[Service_3_alliance](https://i.imgur.com/HM5XcXp.png),[service_4_race](https://i.imgur.com/LH4Bu1x.png)
+[Service_1](https://i.imgur.com/kHy3GvM.png), [Service_2_skill](https://i.imgur.com/GoVGo9H.png), [Service_3_alliance](https://i.imgur.com/HM5XcXp.png), [service_4_race](https://i.imgur.com/LH4Bu1x.png)
 
 ## App Architecture 
 
